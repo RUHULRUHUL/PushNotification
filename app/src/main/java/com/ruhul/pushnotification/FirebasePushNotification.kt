@@ -65,15 +65,15 @@ class FirebasePushNotification : FirebaseMessagingService() {
             NotificationCompat.Builder(this, channel1)
                 .setSmallIcon(R.drawable.ic_notification_overlay)
                 .setContentTitle(message.notification!!.title)
-                .setCustomContentView(expandedView)
+                .setCustomBigContentView(expandedView)
                 .setContentText(message.notification!!.body)
-                .setStyle(
+              /*  .setStyle(
                     NotificationCompat.BigPictureStyle().bigLargeIcon(
                         downloadBanner(
                             message.notification!!.imageUrl
                         )
                     )
-                )
+                )*/
                 .setContentIntent(pendingIntent)
                 .setDefaults(Notification.DEFAULT_VIBRATE)
                 .setAutoCancel(false)
